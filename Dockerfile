@@ -23,8 +23,8 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 
 # Upgrade pip and install Ansible via pip
 RUN python3 -m pip install --upgrade pip && \
-    python3 -m pip install "pyavd[ansible]==4.8.0" && \
-    ansible-galaxy collection install arista.avd
+    python3 -m pip install "pyavd[ansible]==5.5.1" && \
+    ansible-galaxy collection install arista.avd:==5.5.1
 
 # Default command
 CMD [ "bash" ]
